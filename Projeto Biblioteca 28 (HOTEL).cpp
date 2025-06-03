@@ -3,8 +3,14 @@
 
 #define MAX_HOSPEDES 5
 #define TAM_NOME 50
+#define TAM_TEL 20
 
-char hospedes[MAX_HOSPEDES][TAM_NOME];
+typedef struct {
+    char nome[TAM_NOME];
+    char telefone[TAM_TEL];
+} Hospede;
+
+Hospede hospedes[MAX_HOSPEDES];
 int totalHospedes = 0;
 
 void checkIn() {
@@ -12,7 +18,11 @@ void checkIn() {
         printf("Hotel cheio. Não é possível fazer mais check-ins.\n");
     } else {
         printf("Digite o nome do hóspede: ");
-        scanf(" %[^\n]", hospedes[totalHospedes]);
+        scanf(" %[^\n]", hospedes[totalHospedes].nome);
+
+        printf("Digite o telefone do hóspede: ");
+        scanf(" %[^\n]", hospedes[totalHospedes].telefone);
+
         totalHospedes++;
         printf("Check-in realizado com sucesso!\n");
     }
@@ -24,7 +34,7 @@ void listarHospedes() {
     } else {
         printf("Lista de Hóspedes:\n");
         for (int i = 0; i < totalHospedes; i++) {
-            printf("%d. %s\n", i + 1, hospedes[i]);
+            printf("%d. Nome: %s | Telefone: %s\n", i + 1, hospedes[i].nome, hospedes[i].telefone);
         }
     }
 }
