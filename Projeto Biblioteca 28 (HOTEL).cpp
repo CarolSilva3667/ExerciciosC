@@ -42,9 +42,9 @@ void listarHospedes() {
 void servicoQuarto() {
     int opcao;
     printf("Serviço de Quarto:\n");
-    printf("1. Toalhas\n");
-    printf("2. Limpeza\n");
-    printf("3. Comida\n");
+    printf("1 - Toalhas\n");
+    printf("2 - Limpeza\n");
+    printf("3 - Comida\n");
     printf("Escolha uma opção: ");
     scanf("%d", &opcao);
 
@@ -66,9 +66,9 @@ void servicoQuarto() {
 void fazerPedido() {
     int pedido;
     printf("Menu de Pedidos:\n");
-    printf("1. Sanduíche - R$15\n");
-    printf("2. Refrigerante - R$6\n");
-    printf("3. Café - R$4\n");
+    printf("1 - Sanduíche = R$15\n");
+    printf("2 - Refrigerante = R$6\n");
+    printf("3 - Café - R$4\n");
     printf("Escolha seu pedido: ");
     scanf("%d", &pedido);
 
@@ -91,11 +91,11 @@ int main() {
     int escolha;
     do {
         printf("\n------ Menu do Hotel ------\n");
-        printf("1. Check-in\n");
-        printf("2. Listar Hóspedes\n");
-        printf("3. Serviço de Quarto\n");
-        printf("4. Fazer Pedido\n");
-        printf("5. Sair\n");
+        printf("1 - Check-in\n");
+        printf("2 - Listar Hóspedes\n");
+        printf("3 - Serviço de Quarto\n");
+        printf("4 - Fazer Pedido\n");
+        printf("5 - Sair\n");
         printf("Escolha uma opção: ");
         scanf("%d", &escolha);
 
